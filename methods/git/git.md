@@ -30,11 +30,18 @@ git push origin HEAD --force
 ``` sh
 # 跟踪分支
 git checkout -b develop origin/develop
+
+# 设置跟踪
+git branch --set-upstream develop origin/develop
 ```
 
 ## 设置
 ``` sh
-# 全局设置
+# 用户信息
+git config --global user.name fasionchan
+git config --global user.email fasionchan@gmail.com
+
+# 工具设置
 git config --global diff.tool vimdiff
 git config --global merge.tool vimdiff
 git config --global difftool.prompt false
