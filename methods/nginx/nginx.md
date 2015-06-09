@@ -51,3 +51,41 @@ upstream dest-site.com {
     server 10.0.0.1:80 weight=1;
 }
 ```
+
+### 静态资源缓存
+
+``` txt
+server {
+    listen 80;
+    server_name some-site.com;
+
+    root /some/path/to/site;
+
+    # 缓存图片
+    location ~ \.(jpg|png|jpeg|bmp|gif|swf)$ {
+        root /some/path/to/site/images;
+        if (-f $request_filename) {
+            expires 7d;
+            break;
+        }
+    }
+
+    # 缓存样式
+    location ~ \.(css)$ {
+        root /some/path/to/site/css;
+        if (-f $request_filename) {
+            expires 3d;
+            break;
+        }
+    }
+
+    # 缓存脚本
+    location ~ \.(js)$ {
+        root /some/path/to/site/js;
+        if (-f $request_filename) {
+            expires 1d;
+            break;
+        }
+    }
+}
+```
