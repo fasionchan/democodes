@@ -14,7 +14,7 @@ server {
     }
 }
 
-# 服务器集群及权重
+# 服务器集群及权重（可选）
 upstream dest-site.com {
     server 10.0.0.1:80 weight=1;
 }
