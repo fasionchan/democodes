@@ -1,17 +1,4 @@
-#!/usr/bin/env python
-# -*- encoding=utf8 -*-
-
-'''
-FileName:   limits.py
-Author:     Chen Yanfei
-@contact:   fasionchan@gmail.com
-@version:   $Id$
-
-Description:
-
-Changelog:
-
-'''
+# 资源限制
 
 ## 用户资源限制配置文件
 
