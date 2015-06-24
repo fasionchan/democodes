@@ -15,7 +15,7 @@ root            hard    nofile      65535
 
 ## pam-limits
 
-如果上述配置没有生效，则需要在`/etc/pam.d/common-session`中加上一下配置：
+如果上述配置没有生效，则需要在`/etc/pam.d/common-session`中加上以下配置：
 
 ``` txt
 session required pam_limits.so
